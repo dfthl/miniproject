@@ -14,66 +14,9 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <style>
-        a {
-          text-decoration: none;
-        }
-        .navbar{
-            background-color: white;
-            border-bottom: solid #eeeeee;
-            padding: 50px;
-        }
-        .navbar-nav{
-            list-style-type: none;
-            margin-left: 40%;
-        }
-        .navbar-toggler{
-            margin-left: 50%;
-        }
-        .nav-link{
-            color: #234c63;
-        }
-        .nav-link > .active  a{
-            color : #f2f5ff;
-        }
-        .breadcrumb{
-            margin-left: 30px;
-        }
-        .col .card{
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            display: flex;
-        }
-        .col .card:hover{
-            transform: translateY(-30px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-        .form-check:hover{
-            transform: translateX(5px);
-        }
-        .social-links {
-        display: inline-block;
-        height: 40px;
-        width: 40px;
-        background-color: rgba(255, 255, 255, 0.2);
-        margin: 0 10px 10px 0;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        }
-        footer{
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-top: 10px;
-        }
-        hr {
-        height: 2px;
-        width: 70px;
-        }
-        img {
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="home.css">
+
+    <script src="home.js"></script>
     
     <title>Home</title>
 </head>
@@ -143,9 +86,9 @@
                                 <div class="card" style="width: 17rem;">
                                     <button data-bs-toggle="modal" data-bs-target="#card1" style="background-color: white; border: 0px;">
                                         <img src="./assets/The Maid.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p style="height: 48px;">The Maid by Nita Prose</p>
-                                            <p class="card-text"><strong>Rp 200.000,00</strong></p>
+                                        <div class="card-body" id="1">
+                                            <p class="title" style="height: 48px;">The Maid by Nita Prose</p>
+                                            <p class="price"><strong>Rp 200.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -164,7 +107,7 @@
                                                 <p style="text-align: center;"><b>Rp 200.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(1)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -182,9 +125,9 @@
                                 <div class="card" style="width: 17rem">
                                     <button data-bs-toggle="modal" data-bs-target="#card2" style="background-color: white; border: 0px;">
                                         <img src="./assets/Daughter-of-the-Moon-Goddess-by-Sue-Lynn-Tan.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p style="height: 48px;">Daughter of the Moon Goddess by Sue Lynn Tan</p>
-                                            <p class="card-text"><strong>Rp 200.000,00</strong></p>
+                                        <div class="card-body" id="2">
+                                            <p class="title" style="height: 48px;">Daughter of the Moon Goddess by Sue Lynn Tan</p>
+                                            <p class="price"><strong>Rp 200.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -203,7 +146,7 @@
                                                 <p style="text-align: center;"><b>Rp 200.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(2)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -221,9 +164,9 @@
                                 <div class="card" style="width: 17rem">
                                     <button data-bs-toggle="modal" data-bs-target="#card3" style="background-color: white; border: 0px;">
                                         <img src="./assets/Reckless-Girls-by-Rachel-Hawkins.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p>Reckless Girls by Rachel Hawkins</p>
-                                            <p class="card-text"><strong>Rp 200.000,00</strong></p>
+                                        <div class="card-body" id="3">
+                                            <p class="title" style="height: 48px;">Reckless Girls by Rachel Hawkins</p>
+                                            <p class="price"><strong>Rp 200.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -242,7 +185,7 @@
                                                 <p style="text-align: center;"><b>Rp 200.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(3)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -260,9 +203,9 @@
                                 <div class="card" style="width: 17rem">
                                     <button data-bs-toggle="modal" data-bs-target="#card4" style="background-color: white; border: 0px;">
                                         <img src="./assets/No-Land-to-Light-On-by-Yara-Zgheib.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p>No Land to Light on by Yara Zgheib</p>
-                                            <p class="card-text"><strong>Rp 200.000,00</strong></p>
+                                        <div class="card-body" id="4">
+                                            <p class="title" style="height: 48px;">No Land to Light on by Yara Zgheib</p>
+                                            <p class="price"><strong>Rp 200.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -281,7 +224,7 @@
                                                 <p style="text-align: center;"><b>Rp 200.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(4)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -303,9 +246,9 @@
                                 <div class="card" style="width: 17rem">
                                     <button data-bs-toggle="modal" data-bs-target="#card5" style="background-color: white; border: 0px;">
                                         <img src="./assets/The-Roughest-Draft.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p>The Roughest Draft by Emily Wibberley</p>
-                                            <p class="card-text"><strong>Rp 200.000,00</strong></p>
+                                        <div class="card-body" id="5">
+                                            <p class="title" style="height: 48px;">The Roughest Draft by Emily Wibberley</p>
+                                            <p class="price"><strong>Rp 200.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -324,7 +267,7 @@
                                                 <p style="text-align: center;"><b>Rp 200.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(5)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -342,9 +285,9 @@
                                 <div class="card" style="width: 17rem">
                                     <button data-bs-toggle="modal" data-bs-target="#card6" style="background-color: white; border: 0px;">
                                         <img src="./assets/cover_1_Januari_2022_-_Omicron_di_Pelupuk_Mata.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p>Majalah Tempo edisi 01 Januari 2022</p>
-                                            <p class="card-text"><strong>Rp 25.000,00</strong></p>
+                                        <div class="card-body" id="6">
+                                            <p class="title" style="height: 48px;">Majalah Tempo edisi 01 Januari 2022</p>
+                                            <p class="price"><strong>Rp 25.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -364,7 +307,7 @@
                                                 <p style="text-align: center;"><b>Rp 25.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(6)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -382,9 +325,9 @@
                                 <div class="card" style="width: 17rem">
                                     <button data-bs-toggle="modal" data-bs-target="#card7" style="background-color: white; border: 0px;">
                                         <img src="./assets/koran_21.png" class="card-img-top" alt="..." style="border-radius: 10%;">
-                                        <div class="card-body">
-                                            <p>Koran Tempo edisi 08 Januari 2022</p>
-                                            <p class="card-text"><strong>Rp 15.000,00</strong></p>
+                                        <div class="card-body" id="7">
+                                            <p class="title" style="height: 48px;">Koran Tempo edisi 08 Januari 2022</p>
+                                            <p class="price"><strong>Rp 15.000,00</strong></p>
                                         </div>
                                     </button>
                                 </div>
@@ -403,7 +346,7 @@
                                                 <p style="text-align: center;"><b>Rp 15.000,00</b></p>
                                             </div>
                                             <div class="modal-footer" style="display: flex; justify-content: right;">
-                                                <button class="btn btn-success">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                <button class="btn btn-success" onclick="addCart(7)">Add to Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
                                                     <path
                                                         d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
@@ -423,6 +366,22 @@
                 <!-- end catalogue -->
                 <!-- side bar -->
                 <div class="col-2" style="border-bottom: solid; border-width: 1px; border-color: #eeeeee;">
+                    <div class="shopping">
+                        <div class="shopping-cart" onmouseover="over()" onmouseout="out()">
+                            <i class="fas fa-shopping-cart"></i><b><sup id="cart">0</sup></b>
+                            <div id="dropdown-content">
+                                <div class="col" id="checkout-cart" style="padding: 1%;">
+                                    <div class="row">
+                                        <div class="col" id="checkout" style="display: none; text-align: end;">
+                                            <a href="">Checkout</a>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="added">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="input-group rounded" style="padding-top: 10px;">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                         aria-describedby="search-addon" />
